@@ -5,13 +5,15 @@ from random import choice
 #현재 폴더의 파일 목록 생성
 cur_list = os.listdir()
 
-if "current_time" in cur_list:
+dir_name = "current_time"
+
+if dir_name in cur_list:
     pass
 else:
-    os.mkdir("current_time")
+    os.mkdir(dir_name)
 
 #current_time 디렉토리로 이동
-os.chdir("current_time")
+os.chdir(dir_name)
 
 with open("now.txt", "w") as f:
      f.write("현재 폴더의 목록: ")
